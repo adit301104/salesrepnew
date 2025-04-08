@@ -6,82 +6,52 @@ const Canada = () => {
     {
       id: 1,
       title: "Auto Parts Checklist",
-      buttons: [
-        { text: "English", link: "/CaForm1" },
-        { text: "French", link: "/CaForm1Fr" }
-      ]
+      link: "/CaForm1"
     },
     {
       id: 2,
       title: "Auto Parts Introduction Contract",
-      buttons: [
-        { text: "English", link: "/CaForm2" },
-        { text: "French", link: "/CaForm2Fr" }
-      ]
+      link: "/CaForm2"
     },
     {
       id: 3,
       title: "Auto Parts Service Contract",
-      buttons: [
-        { text: "English", link: "/CaForm3" },
-        { text: "French", link: "/CaForm3Fr" }
-      ]
+      link: "/CaForm3"
     },
     {
       id: 4,
       title: "Client Contact Sheet",
-      buttons: [
-        { text: "English", link: "/CaForm4" },
-        { text: "French", link: "/CaForm4Fr" }
-      ]
+      link: "/CaForm4"
     },
     {
       id: 5,
       title: "Dealer Introduction Contract",
-      buttons: [
-        { text: "English", link: "/CaForm5" },
-        { text: "French", link: "/CaForm5Fr" }
-      ]
+      link: "/CaForm5"
     },
     {
       id: 6,
       title: "Dealer Service Contract",
-      buttons: [
-        { text: "English", link: "/CaForm6" },
-        { text: "French", link: "/CaForm6Fr" }
-      ]
+      link: "/CaForm6"
     },
     {
       id: 7,
       title: "Garage Checklist",
-      buttons: [
-        { text: "English", link: "/CaForm7" },
-        { text: "French", link: "/CaForm7Fr" }
-      ]
+      link: "/CaForm7"
     },
     {
       id: 8,
       title: "Garage Introduction Contract",
-      buttons: [
-        { text: "English", link: "/CaForm8" },
-        { text: "French", link: "/CaForm8Fr" }
-      ]
+      link: "/CaForm8"
     },
     {
       id: 9,
       title: "Garage Service Contract",
-      buttons: [
-        { text: "English", link: "/CaForm9" },
-        { text: "French", link: "/CaForm9Fr" }
-      ]
+      link: "/CaForm9"
     },
     {
       id: 10,
       title: "Interview Questions for Garages",
-      buttons: [
-        { text: "English", link: "/CaForm10" },
-        { text: "French", link: "/CaForm10Fr" }
-      ]
+      link: "/CaForm10"
     }
   ];
 
@@ -89,20 +59,19 @@ const Canada = () => {
     <div className="space-y-4 md:space-y-6">
       {forms.map((form) => (
         <div key={form.id} className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4">
-            {form.id}. {form.title}
-          </h3>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-            {form.buttons.map((button, index) => (
-              <Link
-                key={index}
-                to={button.link}
-                className="flex-1 bg-[#4CAF50] hover:bg-[#45a049] text-white font-medium py-2 px-4 rounded transition-colors whitespace-nowrap overflow-hidden text-ellipsis text-center"
-              >
-                {button.text}
-              </Link>
-            ))}
-          </div>
+          <Link
+            to={form.link}
+            className="block w-full"
+          >
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2 hover:text-[#4CAF50] transition-colors">
+              {form.id}. {form.title}
+            </h3>
+            <div className="mt-2">
+              <button className="w-full bg-[#4CAF50] hover:bg-[#45a049] text-white font-medium py-2 px-4 rounded transition-colors text-center">
+                Open Form
+              </button>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
