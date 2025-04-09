@@ -6,72 +6,96 @@ const Canada = () => {
     {
       id: 1,
       title: "Auto Parts Checklist",
-      link: "/CaForm1"
+      linkEn: "/CaForm1",
+      linkFr: "/CaForm1Fr"
     },
     {
       id: 2,
       title: "Auto Parts Introduction Contract",
-      link: "/CaForm2"
+      linkEn: "/CaForm2",
+      linkFr: "/CaForm2Fr"
     },
     {
       id: 3,
       title: "Auto Parts Service Contract",
-      link: "/CaForm3"
+      linkEn: "/CaForm3",
+      linkFr: "/CaForm3Fr"
     },
     {
       id: 4,
       title: "Client Contact Sheet",
-      link: "/CaForm4"
+      linkEn: "/CaForm4",
+      linkFr: "/CaForm4Fr"
     },
     {
       id: 5,
       title: "Dealer Introduction Contract",
-      link: "/CaForm5"
+      linkEn: "/CaForm5",
+      linkFr: "/CaForm5Fr"
     },
     {
       id: 6,
       title: "Dealer Service Contract",
-      link: "/CaForm6"
+      linkEn: "/CaForm6",
+      linkFr: "/CaForm6Fr"
     },
     {
       id: 7,
       title: "Garage Checklist",
-      link: "/CaForm7"
+      linkEn: "/CaForm7",
+      linkFr: "/CaForm7Fr"
     },
     {
       id: 8,
       title: "Garage Introduction Contract",
-      link: "/CaForm8"
+      linkEn: "/CaForm8",
+      linkFr: "/CaForm8Fr"
     },
     {
       id: 9,
       title: "Garage Service Contract",
-      link: "/CaForm9"
+      linkEn: "/CaForm9",
+      linkFr: "/CaForm9Fr"
     },
     {
       id: 10,
       title: "Interview Questions for Garages",
-      link: "/CaForm10"
+      linkEn: "/CaForm10",
+      linkFr: "/CaForm10Fr"
     }
   ];
 
+  const buttonStyle = {
+    padding: "8px 18px",
+    backgroundColor: "#22c55e",
+    color: "white",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontWeight: "500",
+    fontSize: "15px",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
+  };
+
   return (
-    <div className="space-y-4 md:space-y-6">
+    <div>
       {forms.map((form) => (
-        <div key={form.id} className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-          <Link
-            to={form.link}
-            className="block w-full"
-          >
-            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2 hover:text-[#4CAF50] transition-colors">
-              {form.id}. {form.title}
-            </h3>
-            <div className="mt-2">
-              <button className="w-full bg-[#4CAF50] hover:bg-[#45a049] text-white font-medium py-2 px-4 rounded transition-colors text-center">
-                Open Form
+        <div key={form.id} style={{ margin: "15px 0", padding: "15px", border: "1px solid #e5e7eb", borderRadius: "8px", boxShadow: "0 1px 3px rgba(0, 0, 0, 0.05)" }}>
+          <div style={{ marginBottom: "12px", textAlign: "center" }}>
+            <span style={{ fontWeight: "bold", fontSize: "16px" }}>{form.id}. {form.title}</span>
+          </div>
+          <div style={{ display: "flex", justifyContent: "center", gap: "15px" }}>
+            <Link to={form.linkEn} style={{ textDecoration: "none" }}>
+              <button style={buttonStyle}>
+                English
               </button>
-            </div>
-          </Link>
+            </Link>
+            <Link to={form.linkFr} style={{ textDecoration: "none" }}>
+              <button style={buttonStyle}>
+                French
+              </button>
+            </Link>
+          </div>
         </div>
       ))}
     </div>
