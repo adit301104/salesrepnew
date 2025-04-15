@@ -21,16 +21,16 @@ import CaForm9 from './CaForms/CaForm9';
 import CaForm10 from './CaForms/CaForm10';
 
 // Canadian Forms (French)
-// import CaForm1Fr from './CaForms/CaForm1Fr';
-// import CaForm2Fr from './CaForms/CaForm2Fr';
-// import CaForm3Fr from './CaForms/CaForm3Fr';
-// import CaForm4Fr from './CaForms/CaForm4Fr';
-// import CaForm5Fr from './CaForms/CaForm5Fr';
-// import CaForm6Fr from './CaForms/CaForm6Fr';
-// import CaForm7Fr from './CaForms/CaForm7Fr';
-// import CaForm8Fr from './CaForms/CaForm8Fr';
-// import CaForm9Fr from './CaForms/CaForm9Fr';
-// import CaForm10Fr from './CaForms/CaForm10Fr';
+import CaForm1Fr from './CaForms/CaForm1Fr';
+import CaForm2Fr from './CaForms/CaForm2Fr';
+import CaForm3Fr from './CaForms/CaForm3Fr';
+import CaForm4Fr from './CaForms/CaForm4Fr';
+import CaForm5Fr from './CaForms/CaForm5Fr';
+import CaForm6Fr from './CaForms/CaForm6Fr';
+import CaForm7Fr from './CaForms/CaForm7Fr';
+import CaForm8Fr from './CaForms/CaForm8Fr';
+import CaForm9Fr from './CaForms/CaForm9Fr';
+import CaForm10Fr from './CaForms/CaForm10Fr';
 
 // US Forms (English only)
 import USForm1 from './USForms/USForm1';
@@ -75,7 +75,7 @@ function App() {
           <Route path="/CaForm10" element={<CaForm10 />} />
           
           {/* Canadian Forms - French */}
-          {/* <Route path="/CaForm1Fr" element={<CaForm1Fr />} />
+          <Route path="/CaForm1Fr" element={<CaForm1Fr />} />
           <Route path="/CaForm2Fr" element={<CaForm2Fr />} />
           <Route path="/CaForm3Fr" element={<CaForm3Fr />} />
           <Route path="/CaForm4Fr" element={<CaForm4Fr />} />
@@ -84,7 +84,7 @@ function App() {
           <Route path="/CaForm7Fr" element={<CaForm7Fr />} />
           <Route path="/CaForm8Fr" element={<CaForm8Fr />} />
           <Route path="/CaForm9Fr" element={<CaForm9Fr />} />
-          <Route path="/CaForm10Fr" element={<CaForm10Fr />} /> */}
+          <Route path="/CaForm10Fr" element={<CaForm10Fr />} />
           
           {/* US Forms - English */}
           <Route path="/USForm1" element={<USForm1 />} />
